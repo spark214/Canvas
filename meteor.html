@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meteor</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            background: linear-gradient(to bottom, #131313 0%, rgba(8,20,44,1) 100%);
+        }
+        .canvas-box{
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+        /*.box{*/
+            /*position: absolute;*/
+            /*z-index: 10;*/
+            /*color:#fff;*/
+            /*font-family: Arial;*/
+            /*left: 50%;*/
+            /*top:50%;*/
+            /*transform: translate(-50%,-50%);*/
+            /*text-align: center;*/
+        /*}*/
+        /*a:link,a:hover,a:visited,a:active{*/
+            /*text-decoration: none;*/
+            /*color: inherit;*/
+            /*display: block;*/
+        /*}*/
+        /*a{*/
+            /*margin: 30px 0;*/
+            /*font-size: 20px;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="canvas-box">
+    <canvas id="canvas"></canvas>
+</div>
+<script src="meteor.js" type="text/javascript"></script>
+</body>
+</html>
