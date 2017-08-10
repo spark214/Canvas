@@ -41,6 +41,9 @@
             /*color: inherit;*/
             /*display: block;*/
         /*}*/
+        .nav{
+            display: none;
+        }
         span{
             margin: 10%;
         }
@@ -48,9 +51,14 @@
 </head>
 <body>
 <div class="container">
-<div class="box">
+<div class="box" onmouseover="navdisplay(1)" onmouseout="navdisplay(0)">
     <h1 >21's Space!</h1>
-    <p id="box-title"><span>Show Something Here.</span></p>
+    <p id="box-title" ><span>Show Something Here.</span></p>
+    <ul class="nav nav-pills nav-stacked" id="box-nav">
+        <li role="presentation"><a href="http://115.159.53.208/cat/index.html" target="_blank">MyCat</a></li>
+        <li role="presentation"><a href="http://115.159.53.208/my-Meizu-website/index.html" target="_blank">Fake-meizu-website</a></li>
+        <li role="presentation"><a href="http://115.159.53.208/markdown/index.html" target="_blank">MakeDown</a></li>
+    </ul>
 </div>
 <div class="canvas-box">
     <canvas id="canvas"></canvas>
@@ -59,6 +67,15 @@
 <script src="meteor.js" type="text/javascript"></script>
 <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="bootstrap.min.js" type="text/javascript"></script>
-
+<script>
+    function navdisplay(num) {
+        if(num==1){
+            document.getElementById("box-nav").style.display="block";
+        }
+        else if(num==0){
+            document.getElementById("box-nav").style.display="none";
+        }
+    }
+</script>
 </body>
 </html>

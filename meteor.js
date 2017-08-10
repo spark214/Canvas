@@ -13,7 +13,7 @@ window.onload=function () {
     canvas.height=WINDOW_HEIGHT
     context=canvas.getContext('2d');
     addStar();
-    setInterval(render,20);
+    setInterval(render,30);
     meteor();
 }
 
