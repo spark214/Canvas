@@ -68,19 +68,23 @@ function render() {
         }
         star.x += star.vx;
         if(star.x>=WINDOW_WIDTH){
-            star.x=0;
+            star.x=Math.round(Math.random()*WINDOW_WIDTH);
+            star.vx=Math.random()*0.2-0.1;
+            star.vy=Math.random()*0.2-0.1;
         }else if(star.x<0){
-            star.x=WINDOW_WIDTH;
+            star.x=Math.round(Math.random()*WINDOW_WIDTH);
             star.vx=Math.random()*0.2-0.1;
             star.vy=Math.random()*0.2-0.1;
         }
         star.y += star.vy;
         if(star.y>=WINDOW_HEIGHT){
-            star.y=0;
+            star.y=Math.round(Math.random()*WINDOW_HEIGHT);
             star.vy=Math.random()*0.2-0.1;
             star.vx=Math.random()*0.2-0.1;
         }else if(star.y<0){
-            star.y=WINDOW_HEIGHT;
+            star.y=Math.round(Math.random()*WINDOW_HEIGHT);
+            star.vy=Math.random()*0.2-0.1;
+            star.vx=Math.random()*0.2-0.1;
         }
         context.beginPath();
         var bg=context.createRadialGradient(star.x,star.y,0,star.x,star.y,star.r);
